@@ -1,0 +1,53 @@
+body {
+  padding-top: 5rem;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+div.bd-example {
+  margin-top: 14px;
+}
+
+div.blog-post {
+  padding-top: 50px;
+}
+
+/* START TNK055 LABS STYLES START */
+.gislabs img {
+  max-width: 80%;
+}
+
+.gislabs .align-center {
+  max-width: 80%;
+}
+
+.gislabs hr {
+  border-top: 4px solid rgb(0, 0, 0);
+}
+
+.gislabs .headerlink {
+  visibility: hidden;
+}
+
+.gislabs h2>img {
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+}
+
+.gislabs span.guilabel {
+  font-weight: bold;
+  border: 1px solid#ddd;
+  background:#eee;
+  color:#08C;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.gislabs .admonition-title {
+  font-weight: bold;
+}
+
+/* END TNK055 LABS STYLES END */

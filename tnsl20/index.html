@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Basic Logistics Algorithms</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/template.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles/default.css">
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/#publications">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/tnsl20/">TNSL20</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tnk055/">TNK055 (Matlab)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tnk055_gis/">TNK055 (QGIS)</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="col-sm-12 blog-main">
+        <div class="row">
+          <div class="col-9">
+            <h1 style="">Basic Logistics Algorithms: Matlab part</h1>
+
+            <a href="https://sites.google.com/site/tnsl20liu/">Lectures webpage</a>
+          </div>
+          <div class="col-3">
+            <div class="list-group">
+              <a href="#" class="list-group-item disabled">
+                Navigation
+              </a>
+              <a href="#announcements" class="list-group-item">
+                Announcements
+              </a>
+              <a href="#course_materials" class="list-group-item">
+                Course materials
+              </a>
+              <a href="#syntax" class="list-group-item">
+                Syntax overview
+              </a>
+              <a href="#examples" class="list-group-item">
+                Code examples
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <!-- <hr> -->
+
+        
+        <div id="announcements" class="row blog-post">
+        <h1 class="blog-post-title">Announcements</h1>
+        </div>
+        
+        <ul>
+          <!-- <li>Welcome to the class! A word of caution: Information on this site is not final until the class starts.</li> -->
+          <li>Please, send your solutions for Labs 1-4 to anastasia.lemetti@liu.se (FTL2 students) and lucie.smetanova@liu.se (SL2 students).</li>
+        </ul>
+        <hr>
+        <div class="row">
+          
+        <div class="col-6">
+          <div id="announcements" class="row blog-post">
+          <h1 class="blog-post-title">Schedule</h1>
+          </div>
+          
+          <ul>
+  <li>2024-09-06 - Introduction. MATLAB rehearsal.</li>
+  <li>2024-09-13 - Lab 1</li>
+  <li>2024-09-20 - Lab 2</li>
+  <li>2024-09-24 - Redovisning lab 1&2</li>
+  <li>2024-09-26 - Lab 3</li>
+  <li>2024-10-04 - Lab 4</li>
+  <li>2024-10-08 - Redovisning lab 3&4</li>
+  <li>2024-10-11 - Extra redovisning session</li>
+          </ul>
+        </div>
+
+
+        <div class="col-6">
+          <div id="grading" class="row blog-post">
+          <h1 class="blog-post-title">Grading</h1>
+          </div>
+          
+          <ul>
+            <li>To pass the labs you need to complete all labs tasks, present them during the "redovisning" sessions and get them approved.</li>
+            <li>On the "redovisning" sessions we will be asking questions regarding your code: how it works, what it does, etc. You are expected to be able to explain it.</li>
+            <li>Please note that everyone working in a group is expected to be able to answer questions regarding the solutions. It is possible that some people in a group pass the "redovisning" but other people do not.</li>
+          </ul>
+        </div>
+
+      </div>
+
+
+        <div id="course_materials" class="row blog-post">
+            <h1 class="blog-post-title">Course materials</h1>
+        </div>
+        <div class="row">
+
+        <div class="col-4">
+        <h2 class="blog-post-title">Labs</h2>
+        <ul>
+          <li><a href="/tnsl20/labs/2023/TNSL20_2023_lab0.pdf">Rehearsal lab</a></li>
+          <li><a href="/tnsl20/labs/2023/TNSL20_2023_lab1_lab2.pdf">Lab 1&2</a>, <a href="/tnsl20/labs/2023/dijkstra.m">template</a></li>
+          <li><a href="/tnsl20/labs/2023/TNSL20_2023_lab3_lab4.pdf">Lab 3&4</a></li>
+        </ul>
+
+        </div>
+            <div class="col-4">
+                <h2 class="blog-post-title col-6">Useful materials</h1>
+                   <ul>
+                    <li><a href="https://sites.google.com/view/tnsl24/home">TNSL24 course materials</a></li>
+                    <li>
+                      Lecture notes from <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-057-introduction-to-matlab-january-iap-2019/">Matlab Course</a> @ <a href="http://mit.ocw/">MIT.OCW</a>
+                    </li>
+                  </ul>
+                  
+            </div>
+            
+            <div class="col-4">
+                <h2 class="blog-post-title">Additional materials</h2>
+                <ul>
+                  <li><a href="https://www.mathworks.com/help/matlab/">Matlab documentation homepage</a></li>
+                  <li><a href="https://www.mathworks.com/help/matlab/getting-started-with-matlab.html">Getting started with Matlab</a></li>
+                  <li><a href="http://www.cyclismo.org/tutorial/matlab/">Short Matlab tutorial</a></li>
+                  <li><a href="https://www.mathworks.com/help/matlab/matlab_prog/debugging-process-and-features.html">Debugging a Matlab program</a></li>
+                </ul>  
+            </div>
+              
+        </div>
+
+        <div id="labs" class="blog-post col">
+               
+
+        <!-- <h2 class="blog-post-title">Grading</h2> -->
+
+        <!-- Solutions to all homework sets must be sent via email to <a href="mailto:leonid.sedov@liu.se">leonid.sedov@liu.se</a>. Send Matlab files, not Word documents! -->
+        <!-- <ul>
+          <li>Homework 2 - complete 2 out of 3 implementation questions</li>
+          <li>Homework 4 - complete both implementation questions</li>
+        </ul> -->
+        </div>
+        </div>
+        <hr>
+
+        <div id="syntax" class="blog-post">
+          <h1 class="blog-post-title">Short syntax overview</h1>
+
+            <div class="bd-example language-matlab highlighter-rouge">
+              <h5>Basic syntax</h5>
+              <table class="table">
+                  <tr>
+                      <td>Assign value <code>1</code> to variable <code>x</code></td>
+                      <td><code>x = 1;</code></td>
+                      <td><a href="https://se.mathworks.com/help/matlab/matlab_env/enter-statements-in-command-window.html">Documentation</a></td>
+                    </tr>
+                <tr>
+                  <td>Reference particular element in a vector <code>v</code> at index <code>n</code></td>
+                  <td><code>v(n)</code></td>
+                  <td><a href="https://www.mathworks.com/help/matlab/learn_matlab/array-indexing.html">Documentation</a></td>
+                </tr>
+                <tr>
+                  <td>Assign new value to an element in a vector <code>v</code> at index <code>n</code></td>
+                  <td><code>v(n) = new_value</code></td>
+                  <td><a href="https://www.mathworks.com/help/matlab/learn_matlab/array-indexing.html">Documentation</a></td>
+                </tr>
+                <tr>
+                  <td>Reference particular element in a matrix <code>M</code> at row <code>row</code> and column <code>column</code></td>
+                  <td><code>M(row, column)</code></td>
+                  <td><a href="https://www.mathworks.com/help/matlab/math/matrix-indexing.html">Documentation</a></td>
+                </tr>
+                <tr>
+                  <td>Assign new value to an element in a matrix <code>M</code> at row <code>row</code> and column <code>column</code></td>
+                  <td><code>M(row, column) = new_value</code></td>
+                  <td><a href="https://www.mathworks.com/help/matlab/math/matrix-indexing.html">Documentation</a></td>
+                </tr>
+                <tr>
+                  <td>Refer to all elements in a row <code>n</code> in a matrix <code>M</code></td>
+                  <td><code>M(n, :)</code></td>
+                  <td><a href="https://www.mathworks.com/help/matlab/math/matrix-indexing.html">Documentation</a></td>
+                </tr>
+                <tr>
+                  <td>Refer to all elements in a column <code>n</code> in a matrix <code>M</code></td>
+                  <td><code>M(:, n)</code></td>
+                  <td><a href="https://www.mathworks.com/help/matlab/math/matrix-indexing.html">Documentation</a></td>
+                </tr>
+                <tr>
+                  <td>Number of rows in a matrix <code>M</code></td>
+                  <td><code>size(M, 1)</code></td>
+                  <td><a href="https://www.mathworks.com/help/distcomp/size.html">Documentation</a></td>
+                </tr>
+                <tr>
+                  <td>Number of columns in a matrix <code>M</code></td>
+                  <td><code>size(M, 2)</code></td>
+                  <td><a href="https://www.mathworks.com/help/distcomp/size.html">Documentation</a></td>
+                </tr>
+                <tr>
+                  <td>Number of elements in a vector <code>v</code></td>
+                  <td><code>length(v)</code></td>
+                  <td><a href="https://www.mathworks.com/help/distcomp/length.html">Documentation</a></td>
+                </tr>
+                <tr>
+                  <td>Print value of a variable <code>var</code></td>
+                  <td><code>disp(var)</code></td>
+                  <td><a href="https://www.mathworks.com/help/matlab/ref/disp.html">Documentation</a></td>
+                </tr>
+                <tr>
+                  <td>Clear workspace</td>
+                  <td><code>clear;</code></td>
+                  <td><a href="https://se.mathworks.com/help/matlab/ref/clear.html">Documentation</a></td>
+                </tr>
+                <tr>
+                  <td>Create regularly-spaced vector starting from the number <code>from</code> to the number <code>to</code> with step <code>step</code></td>
+                  <td><code>v = from:step:to</code></td>
+                  <td><a href="https://www.mathworks.com/help/matlab/ref/colon.html">Documentation</a></td>
+                </tr>
+                <tr>
+                  <td>Create unit-spaced vector starting from the number <code>from</code> to the number <code>to</code> (the same as <code>from:1:to</code>)</td>
+                  <td><code>v = from:to</code></td>
+                  <td><a href="https://www.mathworks.com/help/matlab/ref/colon.html">Documentation</a></td>
+                </tr>
+                <tr>
+                  <td>Square root of <code>x</code></td>
+                  <td><code>sqrt(x)</code> or <code>(x)^0.5</code> or <code>(x)^(1/2)</code></td>
+                  <td><a href="https://www.mathworks.com/help/matlab/ref/colon.html">Documentation</a></td>
+                </tr>
+                <tr>
+                  <td>And</td>
+                  <td><code>&&</code></td>
+                  <td><a href="https://www.mathworks.com/help/matlab/ref/colon.html">Documentation</a></td>
+                </tr>
+                <tr>
+                  <td>Or</td>
+                  <td><code>||</code></td>
+                  <td><a href="https://www.mathworks.com/help/matlab/ref/colon.html">Documentation</a></td>
+                </tr>
+                <tr>
+                  <td>Not</td>
+                  <td><code>~</code></td>
+                  <td><a href="https://www.mathworks.com/help/matlab/ref/not.html">Documentation</a></td>
+                </tr>
+                <tr>
+                  <td>Determine equality</td>
+                  <td><code>a == b</code></td>
+                  <td><a href="https://se.mathworks.com/help/matlab/ref/eq.html">Documentation</a></td>
+                </tr>
+                <tr>
+                  <td>Determine inequality</td>
+                  <td><code>a ~= b</code></td>
+                  <td><a href="https://www.mathworks.com/help/matlab/ref/ne.html">Documentation</a></td>
+                </tr>
+                <tr>
+                  <td>Order of operations in Matlab</td>
+                  <td>See documentation</td>
+                  <td><a href="https://www.mathworks.com/help/matlab/matlab_prog/operator-precedence.html">Documentation</a></td>
+                </tr>
+
+              </table>
+            </div>
+
+            <div class="bd-example language-matlab highlighter-rouge">
+              <h5>if, elseif, else</h5>
+              Execute statements if condition is true.
+              <a href="https://www.mathworks.com/help/matlab/ref/if.html">Documentation</a>
+              <pre><code class="matlab">
+if condition
+    statements
+elseif another_condition
+    statements
+else
+    statements
+end</code></pre>
+            </div>
+
+            <div class="bd-example language-matlab highlighter-rouge">
+              <h5>for loop</h5>
+              Repeat statement for each element in a vector. At each iteration it puts next element from the vector <code>values</code> to the variable <code>value</code>.
+              <a href="https://www.mathworks.com/help/matlab/ref/for.html">Documentation</a>
+              <pre><code class="matlab">
+for value = values
+   statements
+end</code></pre>
+            </div>
+
+            <div class="bd-example language-matlab highlighter-rouge">
+              <h5>while loop</h5>
+              Repeat statement when condition is true.
+              <a href="https://www.mathworks.com/help/matlab/ref/while.html">Documentation</a>
+              <pre><code class="matlab">
+while condition
+    statements
+end</code></pre>
+            </div>
+
+            <div class="bd-example language-matlab highlighter-rouge">
+              <h5>function</h5>
+              Declare a function with name <code>name</code>, where <code>y1,...,yN</code> are output variables (put your variables instead of <code>...</code>) and <code>x1,...,xM</code> are input variables.
+              <a href="https://www.mathworks.com/help/matlab/ref/function.html">Documentation</a>
+              <pre><code class="matlab">
+function [y1,...,yN] = name(x1,...,xM)</code></pre>
+            </div>
+        </div>
+
+<hr>
+        <div id="examples" class="blog-post">
+            <h1 class="blog-post-title">Code examples</h1>
+
+
+            <div class="bd-example language-matlab highlighter-rouge">
+                <h5>Finding the maximum element in a vector</h5>
+                <pre><code class="matlab">
+clear;
+
+v = [1, 4, 7, 2, 19];
+
+maximum = v(1);
+
+for i = 1:length(v)
+    element = v(i);
+    
+    if element > maximum
+        maximum = element; 
+    end
+end
+
+disp('The maximum is: ');
+disp(maximum);</code></pre>
+            </div>
+        <div class="bd-example language-matlab highlighter-rouge">
+          <h5>Print "Hello world!" 5 times</h5>
+          <pre><code class="matlab">
+clear;
+v = 1:1:5;
+
+for element=v
+    disp('Hello world!');
+end</code></pre>
+        </div>
+
+
+        <div class="bd-example language-matlab highlighter-rouge">
+          <h5>Sum of elements in a vector</h5>
+          <pre><code class="matlab">
+clear;
+v = [1, 4, 61, 4];
+
+sum = 0;
+for element=v
+    sum = sum + element;
+end
+
+disp(sum);</code></pre>
+        </div>
+
+        <div class="bd-example language-matlab highlighter-rouge">
+          <h5>Sum of elements in a vector using indices (the same as previous)</h5>
+          <pre><code class="matlab">
+clear;
+v = [1, 4, 61, 4];
+
+sum = 0;
+for index=1:1:length(v)
+    element = v(index);
+    sum = sum + element;
+end
+
+disp(sum);</code></pre>
+        </div>
+
+        <div class="bd-example language-matlab highlighter-rouge">
+          <h5>Sum of elements in each column of a matrix</h5>
+          <pre><code class="matlab">
+clear;
+M = [1, 3;
+    2, 2;
+    4, 7;
+    1, 1];
+
+number_of_rows_in_M = size(M, 1);
+number_of_cols_in_M = size(M, 2);
+
+sum = zeros(1, number_of_cols_in_M);
+
+indices_rows = 1:1:number_of_rows_in_M;
+indices_cols = 1:1:number_of_cols_in_M;
+
+for row_index=indices_rows
+    row = M(row_index, :);
+
+    for col_index=indices_cols
+        element = row(col_index);
+        % element = M(row_index, col_index); % alternative approach
+        sum(col_index) = sum(col_index) + element;
+    end
+end
+
+disp(sum);</code></pre>
+
+Or alternative code:
+<pre><code class="matlab">
+clear;
+M = [1, 3;
+    2, 2;
+    4, 7;
+    1, 1];
+
+number_of_rows_in_M = size(M, 1);
+number_of_cols_in_M = size(M, 2);
+
+sum = zeros(1, number_of_cols_in_M);
+
+
+for row_index=1:1:number_of_rows_in_M
+    row = M(row_index, :);
+
+    for col_index=1:1:number_of_cols_in_M
+        element = row(col_index);
+        % element = M(row_index, col_index); % alternative approach
+        sum(col_index) = sum(col_index) + element;
+    end
+end
+
+disp(sum);</code></pre>
+        </div>
+
+
+        <div class="bd-example language-matlab highlighter-rouge">
+          <h5>Simple if elseif else example</h5>
+          <pre><code class="matlab">
+clear;
+a = 1; % try to change
+b = 1; % try to change
+
+if a == 0 && b == 0
+    disp('if');
+elseif b > 0 || a < 0
+    disp('elseif');
+else
+    disp('else');
+end</code></pre>
+        </div>
+
+
+        <div class="bd-example language-matlab highlighter-rouge" id="pairs">
+          <h5>All pairs of vector elements</h5>
+          <pre><code class="matlab">
+clear;
+
+numbers = [1, 4, 6, 7, 10];
+
+
+for v_index = 1:length(numbers)-1
+    v = numbers(v_index);
+    for w_index = v_index+1:length(numbers)
+        w = numbers(w_index);
+
+        pair = [v, w];
+        disp(pair);
+    end
+end</code></pre>
+        </div>
+
+
+        <div class="bd-example language-matlab highlighter-rouge" id="pairs">
+          <h5>Product of two numbers using function</h5>
+          The function has two input variables: <code>a</code> and <code>b</code>. The result of these two numbers product is stored in the variable called <code>prod</code>, hence it is output of the function. Please note that you cannot run the script with function, since a function needs concrete input to work. You should have only one function in a file.
+          <br>
+          File <code>product.m</code>:
+          <pre><code class="matlab">
+function prod=product(a, b)
+    prod = a*b;
+end</code></pre>
+
+After you created a function, you can execute it from any other place by passing input values.
+File <code>calculate_products.m</code>:
+<pre><code class="matlab">
+p1 = product(1,2);
+disp(p1);
+p2 = product(3,5);
+disp(p2);
+
+a = 12;
+b = 23;
+p3 = product(a, b);
+disp(p3);
+p4 = product(2, b);
+disp(p4);
+</code></pre>
+        </div>
+
+
+        </div>
+
+<!-- <hr> -->
+        
+
+
+      </div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- <script>window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')</script> -->
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+  </body>
+</html>
