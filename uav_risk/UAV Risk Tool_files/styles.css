@@ -1,0 +1,71 @@
+/**
+Copyright (C) 2023 hahas94
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+* {
+    box-sizing: border-box;
+    color: #777;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    font-family: sans-serif;
+}
+
+.map-row {
+    height: 640px;
+}
+
+.map-col {
+    border-radius: 2%;
+}
+
+.color-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: center;
+    width: 10px;
+    height: 10px;
+    margin: 13px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+
+#totals-table td {
+border-bottom-width: 0;
+}
+
+#totals-table {
+margin-bottom: 0;
+}
+
+.table-accented {
+    color: #000;
+}
+
+.segment-color-col {
+    min-width: 50px;
+}
+
+a.footer-link {
+    display: inline;
+}
